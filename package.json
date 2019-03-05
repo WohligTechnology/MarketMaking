@@ -9,9 +9,23 @@
     "scripts": {
         "start": "nodemon index.js",
         "build": "docker build -t wohlig/wohlig-framework:latest .",
-        "serve": "docker run -p 3000:3000 wohlig/wohlig-framework:latest"
+        "serve": "docker run -p 3000:3000 wohlig/wohlig-framework:latest",
+        "test": "mocha --timeout 50000"
     },
     "dependencies": {
+        "async": "^2.6.1",
+        "babel-register": "^6.26.0",
+        "chai": "^4.2.0",
+        "chai-http": "^4.2.1",
+        "faker": "^4.1.0",
+        "md5": "^2.2.1",
+        "mocha": "^5.2.0",
+        "otp": "^0.1.3",
+        "qrcode": "^1.3.3",
+        "request": "^2.88.0",
+        "sendgrid": "^5.2.3",
+        "speakeasy": "^2.0.0",
+        "uuid": "^3.3.2",
         "wohlig-framework-core": "^0.0.6"
     },
     "devDependencies": {
@@ -70,7 +84,8 @@
             "StudentModel": true,
             "mongoose": true,
             "Schema": true,
-            "Student": true
+            "Student": true,
+            "MarketMakingModel": true
         }
     }
 }
